@@ -1,0 +1,27 @@
+.site {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-content,
+.site-main {
+  height: 100%;
+}
+
+.site-header .wrapper {
+  display: flex;
+}
+
+.site-menu {
+  margin-left: auto;
+}
+
+.home-content {
+  padding-top: 30vh;
+  text-align: center;
+
+  p {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,268 @@
+/* ------------------------------------------
+ 01 BASE STYLES
+------------------------------------------ */
+
+/* Fonts */
+
+
+/* Structure */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: 'Geogrotesque-Regular';
+  font-weight: 400;
+  position:relative;
+  color: $color-text;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  &.no-scroll{
+    overflow:hidden;
+  }
+}
+
+.site {
+  position: relative;
+}
+
+section, .section {
+  position:relative;
+  padding: 80px 5% 3rem;
+  @media screen and (min-width: $width-md) {
+    padding: 100px 7.5% 3rem;
+  }
+}
+
+.grecaptcha-badge {
+  display: none;
+}
+
+/* Typography */
+
+dd,
+dt,
+li,
+p,
+td,
+th,
+label,
+input,
+select,
+textarea {
+  font-family: 'Geogrotesque-Regular';
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.4em;
+
+  @media screen and (min-width: $width-md) {
+    font-size: 1.125rem;
+  }
+
+  @media screen and (min-width: $width-lg) {
+    font-size: 1.25rem;
+  }
+}
+
+p {
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-family: 'Geogrotesque-Medium';
+  font-weight: 400;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom:0;
+}
+
+h2,.h2 {
+  font-family: 'Geogrotesque-Medium';
+  font-size: 1.75rem;
+  margin-bottom:1rem;
+}
+
+h3 {
+  font-family: 'HelveticaNowText-Bold';
+  font-size: 1.375rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+h5,
+h6 {
+  font-size: 1.125em;
+}
+
+
+a {
+  color: black;
+  position: relative;
+  transition: 0.3s;
+  text-decoration: underline;
+
+  &:hover,
+  &:active {
+    color: black;
+  }
+
+  &:focus {
+    color: black;
+  }
+}
+
+/* Lists */
+
+ul {
+  li {
+    padding-left: 1.5rem;
+    position: relative;
+  }
+}
+
+/* Accessibility */
+
+.screen-reader-text,
+.label {
+  @include visuallyhidden;
+}
+
+/* Forms */
+
+label {
+  display: block;
+
+  &.required:after {
+  }
+}
+
+textarea {
+  height: auto;
+}
+
+
+
+/* Social icons */
+
+
+/*  -----------------------------------------------------------
+	Media Queries - Mobile phones (> 480px)
+------------------------------------------------------------ */
+
+@media screen and (min-width: $width-xs) {
+}
+
+/*  -----------------------------------------------------------
+	Media Queries - Small desktop & vertical tablets (> 768px)
+------------------------------------------------------------ */
+
+@media screen and (min-width: $width-sm) {
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2,.h2 {
+    font-size: 2rem;
+  }
+}
+
+/*  -----------------------------------------------------------
+	Media Queries - Desktop > 1024px
+------------------------------------------------------------ */
+
+@media screen and (min-width: $width-md) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2,.h2 {
+    font-size: 2.25rem;
+    &.h2-text{
+      font-size:4.5rem;
+    }
+  }
+
+  p.lead {
+    font-size: 1.25rem;
+  }
+
+  textarea {
+    padding: 14px;
+  }
+}
+
+/*  -----------------------------------------------------------
+	Media Queries - Desktop > 1264px
+------------------------------------------------------------ */
+
+@media screen and (min-width: $width-lg) {
+  dd,
+  dt,
+  li,
+  p,
+  td,
+  th,
+  .btn,
+  .button,
+  button,
+  input,
+  textarea,
+  label {
+    font-size: 1.25rem;
+    line-height: 1.4em;
+  }
+
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  h2,.h2{
+    font-size: 2.375rem;
+  }
+
+  h3 {
+    font-size: 1.625em;
+  }
+  h4 {
+    font-size: 1.375em;
+  }
+  h5,
+  h6 {
+    font-size: 1.25em;
+  }
+
+  p.lead {
+    font-size: 1.5rem;
+  }
+}
+
+/*  -----------------------------------------------------------
+	Media Queries - Desktop > 1440px
+------------------------------------------------------------ */
+
+@media screen and (min-width: $width-3xl) {
+  p{
+    font-size:1.5rem;
+  }
+}

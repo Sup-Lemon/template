@@ -1,0 +1,226 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+  font-size: ($sizeValue * 16) * 1px;
+  font-size: $sizeValue * 1rem;
+}
+
+// Visually hidden
+
+@mixin visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  border: 0;
+}
+
+@mixin show-content {
+  position: static;
+  overflow: visible;
+  clip: auto;
+  height: auto;
+  width: auto;
+  margin: auto;
+}
+
+// Center block
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    table-layout: fixed;
+    clear: both;
+  }
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+  width: map-get($columns, $numberColumns) -
+    (($columns__margin * ($numberColumns - 1)) / $numberColumns);
+}
+
+// Icons
+
+@mixin icon {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-size: 18px;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+/*
+@mixin icon-regular {
+  @include icon;
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 400;
+}
+*/
+
+@mixin icon-light {
+  @include icon;
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 300;
+}
+
+@mixin icon-solid {
+  @include icon;
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+}
+
+@mixin icon-brands {
+  @include icon;
+  font-family: "Font Awesome 5 Brands";
+  font-weight: normal;
+}
+
+// Typography
+
+@mixin text-uppercase($letter-spacing: 0.03em) {
+  letter-spacing: $letter-spacing;
+  text-transform: uppercase;
+}
+
+@mixin text-lowercase($letter-spacing: 0.03em) {
+  letter-spacing: $letter-spacing;
+  text-transform: lowercase;
+}
+
+// Margins & spacing
+
+$spacing-xs: 2rem;
+$spacing-sm: 3rem;
+$spacing-md: 4rem;
+$spacing-lg: 5rem;
+$spacing-xl: 6rem;
+
+@mixin block-margin-bottom {
+  margin-bottom: $spacing-sm;
+
+  @media screen and (min-width: $width-sm) {
+    //margin-bottom: $spacing-sm;
+  }
+
+  @media screen and (min-width: $width-md) {
+    margin-bottom: $spacing-md;
+  }
+
+  @media screen and (min-width: $width-lg) {
+    margin-bottom: $spacing-lg;
+  }
+
+  @media screen and (min-width: $width-xl) {
+    margin-bottom: $spacing-xl;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin block-margin-top {
+  margin-top: $spacing-sm;
+
+  @media screen and (min-width: $width-sm) {
+    //margin-top: $spacing-sm;
+  }
+
+  @media screen and (min-width: $width-md) {
+    margin-top: $spacing-md;
+  }
+
+  @media screen and (min-width: $width-lg) {
+    margin-top: $spacing-lg;
+  }
+
+  @media screen and (min-width: $width-xl) {
+    margin-top: $spacing-xl;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+@mixin block-margin {
+  @include block-margin-top;
+  @include block-margin-bottom;
+}
+
+@mixin block-padding-top {
+  padding-top: $spacing-xs;
+
+  @media screen and (min-width: $width-sm) {
+    padding-top: $spacing-sm;
+  }
+
+  @media screen and (min-width: $width-md) {
+    padding-top: $spacing-md;
+  }
+
+  @media screen and (min-width: $width-lg) {
+    padding-top: $spacing-lg;
+  }
+
+  @media screen and (min-width: $width-xl) {
+    padding-top: $spacing-xl;
+  }
+}
+
+@mixin block-padding-bottom {
+  padding-bottom: $spacing-xs;
+
+  @media screen and (min-width: $width-sm) {
+    padding-bottom: $spacing-sm;
+  }
+
+  @media screen and (min-width: $width-md) {
+    padding-bottom: $spacing-md;
+  }
+
+  @media screen and (min-width: $width-lg) {
+    padding-bottom: $spacing-lg;
+  }
+
+  @media screen and (min-width: $width-xl) {
+    padding-bottom: $spacing-xl;
+  }
+}
+
+@mixin block-padding {
+  @include block-padding-top;
+  @include block-padding-bottom;
+}
+
+@mixin block-bg {
+  background: $color-bg-light;
+  margin: 0 -10px;
+  padding: 35px;
+
+  @media screen and (min-width: 85em) {
+    margin-left: -50px;
+    margin-right: -50px;
+    padding: 40px 50px;
+  }
+
+  @media screen and (min-width: 90em) {
+    margin-left: -70px;
+    margin-right: -70px;
+    padding: 60px 70px;
+  }
+}

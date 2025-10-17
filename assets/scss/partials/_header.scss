@@ -1,0 +1,61 @@
+/* ------------------------------------------
+ 02 HEADER
+------------------------------------------ */
+
+
+.admin-bar {
+  .site-menu .menu {
+    top: 44px;
+
+    @media screen and (max-width: 782px) {
+      top: 58px;
+    }
+  }
+
+  &.nav-open .menu-toggle {
+    top: 44px;
+
+    @media screen and (max-width: 782px) {
+      top: 58px;
+    }
+  }
+}
+
+/*  -----------------------------------------------------------
+	Media Queries - Mobile phones (> 480px)
+------------------------------------------------------------ */
+
+@media screen and (min-width: $width-xs) {
+}
+
+/*  -----------------------------------------------------------
+	Media Queries - Small desktop & vertical tablets (> 768px)
+------------------------------------------------------------ */
+
+@media screen and (min-width: $width-sm) {
+  .site-branding {
+  }
+}
+
+/*  -----------------------------------------------------------
+	Media Queries - Desktop > 1024px
+------------------------------------------------------------ */
+
+@media screen and (min-width: $width-md) {
+}
+
+/*  -----------------------------------------------------------
+	Media Queries - Desktop > 1264px
+------------------------------------------------------------ */
+
+@media screen and (min-width: $width-lg) {
+  .site-header {
+  }
+}
+
+/*  -----------------------------------------------------------
+	Media Queries - Desktop > 1440px
+------------------------------------------------------------ */
+
+@media screen and (min-width: $width-xl) {
+}

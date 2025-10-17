@@ -1,0 +1,65 @@
+/* ------------------------------------------
+ 03 FOOTER
+------------------------------------------ */
+
+.credits.lemon {
+  margin: 0;
+  margin-left: auto;
+  height: 19px;
+  width: 74px;
+
+  a {
+    color: white;
+    display: block;
+    height: inherit;
+    width: inherit;
+
+    &:hover {
+      color: white;
+    }
+
+    .svg {
+      display: block;
+      fill: currentColor;
+    }
+
+    span {
+      @include visuallyhidden;
+    }
+  }
+}
+
+/*  -----------------------------------------------------------
+	Media Queries - Mobile phones (> 480px)
+------------------------------------------------------------ */
+
+@media screen and (min-width: $width-xs) {
+}
+
+/*  -----------------------------------------------------------
+	Media Queries - Small desktop & vertical tablets (> 768px)
+------------------------------------------------------------ */
+
+@media screen and (min-width: $width-sm) {
+}
+
+/*  -----------------------------------------------------------
+	Media Queries - Desktop > 1024px
+------------------------------------------------------------ */
+
+@media screen and (min-width: $width-md) {
+}
+
+/*  -----------------------------------------------------------
+	Media Queries - Desktop > 1264px
+------------------------------------------------------------ */
+
+@media screen and (min-width: $width-lg) {
+}
+
+/*  -----------------------------------------------------------
+	Media Queries - Desktop > 1440px
+------------------------------------------------------------ */
+
+@media screen and (min-width: $width-xl) {
+}

@@ -1,0 +1,37 @@
+
+.form-item.inline-container {
+  @include clearfix;
+  
+  .form-item {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 14px;
+    
+    input + label,
+    select + label,
+    .wpcf7-form-control-wrap + label {
+      font-size: .875em;
+      font-weight: 400;
+      margin-top: 4px;
+      margin-bottom: .5em;
+      padding: 0;
+    }
+    
+    & + label {
+      margin-top: .5em;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.form-item {
+  margin-bottom: 30px;
+  
+  &:last-child {
+    margin-bottom: 30px;
+  }
+}
+
+div.wpcf7-response-output {
+  margin: 2em 0 1em;
+}
