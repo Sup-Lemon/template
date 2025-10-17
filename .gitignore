@@ -1,2 +1,26 @@
-assets/css/theme.min.css
-assets/css/theme.min.css.map
+# WordPress core
+wp-admin/
+wp-includes/
+
+# Config and uploads
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-config.php
+
+# Logs and temp
+*.log
+*.tmp
+*.zip
+*.tar.gz
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE and tools
+.vscode/
+.sftp.json
+.env
+node_modules/
+vendor/

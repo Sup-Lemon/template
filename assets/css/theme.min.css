@@ -1,0 +1,581 @@
+/*
+
+Reset styles are based on the great work of Eric Meyer http://meyerweb.com/eric/tools/css/reset/ 
+and Nicolas Gallagher & Jonathan Neal http://necolas.github.io/normalize.css/
+
+http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+
+normalize.css v3.0.1 | MIT License | git.io/normalize
+
+*/
+/* Media queries */
+/* Theme colors */
+/* WP colors */
+/*
+@mixin icon-regular {
+  @include icon;
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 400;
+}
+*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+.screen-reader-text:focus {
+  background-color: transparent;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  clip-path: none;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets. */
+}
+.widget:last-child {
+  margin-bottom: 0;
+}
+.widget select {
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+  display: block;
+}
+
+/*
+.post,
+.page {
+	margin: 0 0 1.5em;
+}
+*/
+.updated:not(.published) {
+  display: none;
+}
+
+/*
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+*/
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+  word-wrap: break-word;
+}
+
+.bypostauthor {
+  display: block;
+}
+
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+  display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+.wp-caption img[class*=wp-image-] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+/* ------------------------------------------
+ 01 BASE STYLES
+------------------------------------------ */
+/* Fonts */
+/* Structure */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: "Geogrotesque-Regular";
+  font-weight: 400;
+  position: relative;
+  color: #000;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html.no-scroll {
+  overflow: hidden;
+}
+
+.site {
+  position: relative;
+}
+
+section, .section {
+  position: relative;
+  padding: 80px 5% 3rem;
+}
+@media screen and (min-width: 64em) {
+  section, .section {
+    padding: 100px 7.5% 3rem;
+  }
+}
+
+.grecaptcha-badge {
+  display: none;
+}
+
+/* Typography */
+dd,
+dt,
+li,
+p,
+td,
+th,
+label,
+input,
+select,
+textarea {
+  font-family: "Geogrotesque-Regular";
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.4em;
+}
+@media screen and (min-width: 64em) {
+  dd,
+  dt,
+  li,
+  p,
+  td,
+  th,
+  label,
+  input,
+  select,
+  textarea {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 79em) {
+  dd,
+  dt,
+  li,
+  p,
+  td,
+  th,
+  label,
+  input,
+  select,
+  textarea {
+    font-size: 1.25rem;
+  }
+}
+
+p {
+  margin-bottom: 1rem;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Geogrotesque-Medium";
+  font-weight: 400;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+h2, .h2 {
+  font-family: "Geogrotesque-Medium";
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-family: "HelveticaNowText-Bold";
+  font-size: 1.375rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+h5,
+h6 {
+  font-size: 1.125em;
+}
+
+a {
+  color: black;
+  position: relative;
+  transition: 0.3s;
+  text-decoration: underline;
+}
+a:hover, a:active {
+  color: black;
+}
+a:focus {
+  color: black;
+}
+
+/* Lists */
+ul li {
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+/* Accessibility */
+.screen-reader-text,
+.label {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  border: 0;
+}
+
+/* Forms */
+label {
+  display: block;
+}
+textarea {
+  height: auto;
+}
+
+/* Social icons */
+/*  -----------------------------------------------------------
+	Media Queries - Mobile phones (> 480px)
+------------------------------------------------------------ */
+/*  -----------------------------------------------------------
+	Media Queries - Small desktop & vertical tablets (> 768px)
+------------------------------------------------------------ */
+@media screen and (min-width: 48em) {
+  h1 {
+    font-size: 2.25rem;
+  }
+  h2, .h2 {
+    font-size: 2rem;
+  }
+}
+/*  -----------------------------------------------------------
+	Media Queries - Desktop > 1024px
+------------------------------------------------------------ */
+@media screen and (min-width: 64em) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2, .h2 {
+    font-size: 2.25rem;
+  }
+  h2.h2-text, .h2.h2-text {
+    font-size: 4.5rem;
+  }
+  p.lead {
+    font-size: 1.25rem;
+  }
+  textarea {
+    padding: 14px;
+  }
+}
+/*  -----------------------------------------------------------
+	Media Queries - Desktop > 1264px
+------------------------------------------------------------ */
+@media screen and (min-width: 79em) {
+  dd,
+  dt,
+  li,
+  p,
+  td,
+  th,
+  .btn,
+  .button,
+  button,
+  input,
+  textarea,
+  label {
+    font-size: 1.25rem;
+    line-height: 1.4em;
+  }
+  h1 {
+    font-size: 2.75rem;
+  }
+  h2, .h2 {
+    font-size: 2.375rem;
+  }
+  h3 {
+    font-size: 1.625em;
+  }
+  h4 {
+    font-size: 1.375em;
+  }
+  h5,
+  h6 {
+    font-size: 1.25em;
+  }
+  p.lead {
+    font-size: 1.5rem;
+  }
+}
+/*  -----------------------------------------------------------
+	Media Queries - Desktop > 1440px
+------------------------------------------------------------ */
+@media screen and (min-width: 125em) {
+  p {
+    font-size: 1.5rem;
+  }
+}
+/* ------------------------------------------
+ 02 HEADER
+------------------------------------------ */
+.admin-bar .site-menu .menu {
+  top: 44px;
+}
+@media screen and (max-width: 782px) {
+  .admin-bar .site-menu .menu {
+    top: 58px;
+  }
+}
+.admin-bar.nav-open .menu-toggle {
+  top: 44px;
+}
+@media screen and (max-width: 782px) {
+  .admin-bar.nav-open .menu-toggle {
+    top: 58px;
+  }
+}
+
+/*  -----------------------------------------------------------
+	Media Queries - Mobile phones (> 480px)
+------------------------------------------------------------ */
+/*  -----------------------------------------------------------
+	Media Queries - Small desktop & vertical tablets (> 768px)
+------------------------------------------------------------ */
+/*  -----------------------------------------------------------
+	Media Queries - Desktop > 1024px
+------------------------------------------------------------ */
+/*  -----------------------------------------------------------
+	Media Queries - Desktop > 1264px
+------------------------------------------------------------ */
+/*  -----------------------------------------------------------
+	Media Queries - Desktop > 1440px
+------------------------------------------------------------ */
+/* ------------------------------------------
+ 03 FOOTER
+------------------------------------------ */
+.credits.lemon {
+  margin: 0;
+  margin-left: auto;
+  height: 19px;
+  width: 74px;
+}
+.credits.lemon a {
+  color: white;
+  display: block;
+  height: inherit;
+  width: inherit;
+}
+.credits.lemon a:hover {
+  color: white;
+}
+.credits.lemon a .svg {
+  display: block;
+  fill: currentColor;
+}
+.credits.lemon a span {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  border: 0;
+}
+
+/*  -----------------------------------------------------------
+	Media Queries - Mobile phones (> 480px)
+------------------------------------------------------------ */
+/*  -----------------------------------------------------------
+	Media Queries - Small desktop & vertical tablets (> 768px)
+------------------------------------------------------------ */
+/*  -----------------------------------------------------------
+	Media Queries - Desktop > 1024px
+------------------------------------------------------------ */
+/*  -----------------------------------------------------------
+	Media Queries - Desktop > 1264px
+------------------------------------------------------------ */
+/*  -----------------------------------------------------------
+	Media Queries - Desktop > 1440px
+------------------------------------------------------------ */
+/* ------------------------------------------
+ 04 CONTENT
+------------------------------------------ */
+.cgu-intro {
+  padding-top: 7rem;
+}
+@media screen and (min-width: 64em) {
+  .cgu-intro {
+    padding-top: 12rem;
+  }
+}
+.cgu-intro .cgu-intro-container {
+  max-width: 1200px;
+  margin: auto;
+}
+.cgu-intro h1 {
+  text-align: center;
+}
+
+.cgu-content {
+  padding-top: 2rem;
+}
+.cgu-content .cgu-content-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.missing-page {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.missing-page .missing-page-container {
+  height: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+.missing-page .missing-page-container .missing-page-title {
+  text-align: center;
+}
+.missing-page .missing-page-container .missing-page-text {
+  text-align: center;
+}
+
+/*  -----------------------------------------------------------
+	Media Queries - Mobile phones (> 480px)
+------------------------------------------------------------ */
+/*  -----------------------------------------------------------
+	Media Queries - Small desktop & vertical tablets (> 768px)
+------------------------------------------------------------ */
+/*  -----------------------------------------------------------
+	Media Queries - Desktop > 1024px
+------------------------------------------------------------ */
+/*  -----------------------------------------------------------
+	Media Queries - Desktop > 1264px
+------------------------------------------------------------ */
+/*  -----------------------------------------------------------
+	Media Queries - Desktop > 1440px
+------------------------------------------------------------ */
+/* IE */
+.site {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-content,
+.site-main {
+  height: 100%;
+}
+
+.site-header .wrapper {
+  display: flex;
+}
+
+.site-menu {
+  margin-left: auto;
+}
+
+.home-content {
+  padding-top: 30vh;
+  text-align: center;
+}
+.home-content p {
+  font-size: 32px;
+}
